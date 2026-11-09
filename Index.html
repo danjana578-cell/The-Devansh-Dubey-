@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Devansh Dubey – Reality behind rituals and traditions</title>
+<meta name="description" content="Documentaries and explainers on local rituals, traditions and riti-riwaaj, and the reality behind them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#AEB2B9;--fg:#000;--mute:#1F2126;--line:#8A8E96;--accent:#6D1D35;--surface:#9CA0A7;--on-accent:#F4F5F7;
+  --display:"Yatra One","Noto Serif Devanagari",Georgia,serif;
+  --body:"Hind","Noto Sans Devanagari",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 6px #22242A;border-radius:4px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+
+/* header */
+.bar{background:#6D1D35;color:#F4F5F7}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:var(--display);font-size:1.25rem}
+.logo{width:44px;height:44px;flex:none;border-radius:50%;object-fit:cover;border:2px solid #C9CDD3;background:#6D1D35}
+.flame{transform-origin:50% 100%;animation:flick 2.4s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1,1) rotate(0)}30%{transform:scale(.92,1.08) rotate(-3deg)}60%{transform:scale(1.05,.95) rotate(2deg)}}
+.bar nav{display:flex;gap:1.2rem;font-size:.95rem}
+.bar nav a{text-decoration:none;opacity:.85;transition:opacity .25s}
+.bar nav a:hover{opacity:1}.bar nav a:hover::after{transform:scaleX(1)}
+@media(max-width:640px){.bar nav a:not(.keep){display:none}}
+
+/* hero */
+.hero{position:relative;height:min(82svh,760px);min-height:480px;overflow:hidden;cursor:none;touch-action:pan-y;--r:170px;--x:50%;--y:50%}
+@media(pointer:coarse){.hero{cursor:default}}
+@media(max-width:640px){.hero{--r:120px}}
+.layer{position:absolute;inset:0;display:flex;align-items:center}
+.layer .wrap{padding-bottom:3rem}
+.layer h1{margin:0;font:400 clamp(3rem,10.5vw,8rem)/1.05 var(--display);letter-spacing:-.01em}
+.layer p{margin:.8rem 0 0;font-size:clamp(1.05rem,2.2vw,1.4rem);max-width:32ch}
+.a{background:#9A9EA5;color:#15171B}
+.b{background:#6D1D35;color:#ECEEF1;-webkit-mask-image:radial-gradient(circle var(--r) at var(--x) var(--y),#000 97%,transparent 100%);mask-image:radial-gradient(circle var(--r) at var(--x) var(--y),#000 97%,transparent 100%)}
+.ring{position:absolute;left:0;top:0;width:calc(var(--r)*2);height:calc(var(--r)*2);margin:calc(var(--r)*-1) 0 0 calc(var(--r)*-1);transform:translate(var(--xp,50vw),var(--yp,50vh));border-radius:50%;border:2px solid #F4F5F7;box-shadow:0 0 60px 8px rgba(255,255,255,.35),inset 0 0 40px rgba(255,255,255,.2);pointer-events:none}
+.ui{position:absolute;left:0;right:0;bottom:1.4rem;pointer-events:none}
+.ui .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1.2rem}
+.ui>.wrap>*{pointer-events:auto}
+.hint{background:#22242A;color:#ECEEF1;border:1px solid #C9CDD3;border-radius:99px;padding:.35rem .95rem;font-size:.9rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:600;padding:.8rem 1.4rem;border-radius:99px;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(0,0,0,.28)}
+.ui .btn{background:#6D1D35;color:#F4F5F7;cursor:pointer;box-shadow:0 0 0 2px #ECEEF1}
+.btn.alt{background:transparent;color:var(--fg);border:2px solid var(--fg)}
+
+/* marquee */
+.strip{background:var(--surface);color:var(--accent);border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;font:400 1.5rem/1 var(--display);padding:.9rem 0}
+.strip div{display:inline-block;animation:slide 28s linear infinite}
+.strip span{margin:0 1.4rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:clamp(3.5rem,9vw,7rem) 0}
+h2{font:400 clamp(2rem,5vw,3.4rem)/1.1 var(--display);margin:0 0 1.2rem;letter-spacing:-.01em}
+
+/* about */
+.about .wrap{display:grid;gap:2.5rem;grid-template-columns:1fr}
+@media(min-width:820px){.about .wrap{grid-template-columns:5fr 4fr;align-items:center}}
+.about p{max-width:60ch}
+.quote{font:400 clamp(1.5rem,3vw,2.1rem)/1.3 var(--display);border-left:6px solid var(--accent);padding-left:1.2rem;margin:0}
+.quote small{display:block;margin-top:.8rem;font:500 .95rem var(--body);color:var(--mute)}
+
+/* topics */
+.promise .grid{display:grid;gap:2rem 3rem;margin-top:2rem}
+@media(min-width:720px){.promise .grid{grid-template-columns:1fr 1fr}}
+.promise .item{border-left:3px solid var(--accent);padding-left:1.1rem}
+.promise h3{font:400 1.45rem/1.25 var(--display);margin:0 0 .35rem}
+.promise p{margin:0;color:var(--mute);max-width:46ch}
+.topics{background:var(--surface)}
+details{border-top:1px solid var(--line);padding:1.1rem 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;font:400 clamp(1.4rem,3vw,2rem)/1.2 var(--display)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 2rem/1 var(--body);color:var(--accent);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:.8rem 0 0;max-width:62ch;color:var(--mute);animation:open .4s ease both}
+@keyframes open{from{opacity:0;transform:translateY(-8px)}}
+
+/* process */
+.steps{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:2rem;counter-reset:s}
+@media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{counter-increment:s;position:relative;padding-top:4.2rem}
+.steps li::before{content:counter(s);position:absolute;top:0;left:0;width:3.2rem;height:3.2rem;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:400 1.5rem var(--display)}
+.steps li::after{content:"";position:absolute;top:1.6rem;left:3.6rem;right:0;height:2px;background:var(--line);transform-origin:left;transform:scaleX(0);transition:transform 1s .3s}
+.steps.in li::after{transform:scaleX(1)}
+@media(max-width:819px){.steps li::after{display:none}}
+.steps h3{font:400 1.5rem/1.2 var(--display);margin:0 0 .4rem}
+.steps p{margin:0;color:var(--mute)}
+
+/* follow */
+.follow{background:#6D1D35;color:#F4F5F7;text-align:center}
+.follow h2{margin-inline:auto;max-width:18ch}
+.follow p{max-width:48ch;margin:0 auto 2rem;color:#DDE0E5}
+.row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+.follow .btn{background:#ECEEF1;color:#6D1D35}
+.follow .btn.alt{background:transparent;color:#ECEEF1;border-color:#ECEEF1}
+footer{background:#22242A;color:#A8ADB8;font-size:.9rem;padding:1.5rem 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+footer .brand{color:#ECEEF1;font-size:1.05rem}
+footer .logo{width:32px;height:32px}
+
+/* motion */
+@keyframes rise{from{opacity:0;transform:translateY(28px)}}
+@keyframes drop{from{opacity:0;transform:translateY(-100%)}}
+@keyframes breathe{50%{box-shadow:0 0 80px 14px rgba(255,255,255,.45),inset 0 0 50px rgba(255,255,255,.28)}}
+@keyframes pulse{50%{transform:scale(1.04)}}
+.bar{animation:drop .7s cubic-bezier(.2,.8,.2,1) both}
+.layer h1{animation:rise 1s .2s cubic-bezier(.2,.8,.2,1) both}
+.layer p{animation:rise 1s .45s cubic-bezier(.2,.8,.2,1) both}
+.ui{animation:rise 1s .8s cubic-bezier(.2,.8,.2,1) both}
+.ring{animation:breathe 3.2s ease-in-out infinite}
+.hint{animation:pulse 2.6s ease-in-out infinite;transition:opacity .5s}
+.brand .logo{transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.brand:hover .logo{transform:rotate(-8deg) scale(1.1)}
+.bar nav a{position:relative}
+.bar nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.strip:hover div{animation-play-state:paused}
+.btn:active{transform:scale(.97)}
+h2::after{content:"";display:block;width:64px;height:3px;border-radius:2px;background:var(--accent);margin-top:.8rem}
+.js h2::after{transform:scaleX(0);transform-origin:left;transition:transform .8s .35s}
+.js h2.in::after{transform:scaleX(1)}
+.follow h2::after{margin-inline:auto;background:#F4F5F7;transform-origin:center}
+.js .grid[data-r],.js .steps[data-r]{opacity:1;transform:none}
+.item,.steps li{transition:opacity .7s,transform .7s,border-color .3s,padding-left .3s}
+.js .grid:not(.in) .item,.js .steps:not(.in) li{opacity:0;transform:translateY(22px)}
+.item:nth-child(2),.steps li:nth-child(2){transition-delay:.12s}
+.item:nth-child(3),.steps li:nth-child(3){transition-delay:.24s}
+.item:nth-child(4){transition-delay:.36s}
+.promise .item:hover{border-left-color:#000;padding-left:1.5rem}
+.steps li::before{transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.steps li:hover::before{transform:scale(1.15) rotate(-6deg)}
+summary{transition:color .25s,padding-left .25s}
+summary:hover{color:var(--accent);padding-left:.5rem}
+.quote{transition:padding-left .3s,border-color .3s}
+.quote:hover{padding-left:1.8rem;border-color:#000}
+
+/* reveal */
+.js [data-r]{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.js [data-r].in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}.js .grid:not(.in) .item,.js .steps:not(.in) li{opacity:1;transform:none}.js h2::after{transform:none}
+  .js [data-r]{opacity:1;transform:none;transition:none}
+  .steps li::after{transform:scaleX(1);transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Devansh Dubey, home">
+      <img class="logo" src="data:image/jpeg;base64,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" alt="Devansh Dubey" width="44" height="44">
+      <span>The Devansh Dubey</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a><a href="#promise">My approach</a><a href="#topics">What I cover</a><a href="#process">How I work</a><a class="keep" href="#follow">Follow</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero" id="hero">
+  <div class="layer a" aria-hidden="true"><div class="wrap"><div><h1>जो बताया गया</h1><p>Rituals and traditions, as you were told.</p></div></div></div>
+  <div class="layer b"><div class="wrap"><div><h1>जो असल में है</h1><p>Rituals and traditions, as they actually are.</p></div></div></div>
+  <div class="ring" id="ring"></div>
+  <div class="ui"><div class="wrap">
+    <a class="btn" href="https://www.youtube.com/@thedevanshdubey28" target="_blank" rel="noopener">Watch on YouTube</a>
+    <span class="hint" id="hint">Move your cursor or touch the screen to light the lamp</span>
+  </div></div>
+</div>
+
+<div class="strip" aria-hidden="true"><div id="mq"></div></div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div data-r>
+      <h2>Namaste, I’m Devansh</h2>
+      <p>Most of us grew up following rituals and customs because our families did, and because it never felt right to ask why. I make videos for that moment of curiosity: where did this come from, and what is the reality behind it?</p>
+      <p>My work is documentaries and explainers on local traditions and riti-riwaaj, read through ancient scriptures and careful research. I’m not here to mock anyone’s faith or tell you what to believe. I want to give you the full story, so the choice stays yours.</p>
+    </div>
+    <blockquote class="quote" data-r>Reality is just in front of you. It needs to be recovered.<small>The idea behind the channel</small></blockquote>
+  </div>
+</section>
+
+<section class="promise" id="promise">
+  <div class="wrap">
+    <h2 data-r>How I approach every story</h2>
+    <div class="grid" data-r>
+      <div class="item"><h3>Respect for people</h3><p>I question ideas, never the people who follow them. Every tradition belongs to a family that cares about it.</p></div>
+      <div class="item"><h3>Sources before opinions</h3><p>Scriptures, records and local voices come first. If I can’t back something up, I don’t say it.</p></div>
+      <div class="item"><h3>Plain language</h3><p>No jargon and no lectures. If a grandparent and a student can’t both follow it, I haven’t done my job.</p></div>
+      <div class="item"><h3>Open to correction</h3><p>If I get something wrong, tell me. Learning in public is part of the work.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="topics" id="topics">
+  <div class="wrap">
+    <h2 data-r>What I cover</h2>
+    <div data-r>
+      <details open><summary>Rituals and riti-riwaaj</summary><p>Local customs from homes, villages and festivals: what is actually done, where it comes from, and what it was meant to achieve.</p></details>
+      <details><summary>Beliefs, questioned</summary><p>Old beliefs that get repeated without explanation. I look at them calmly, with evidence, and without mocking anyone’s faith.</p></details>
+      <details><summary>The scripture lens</summary><p>What the ancient texts actually say compared with what is commonly said they say, and where the two have drifted apart.</p></details>
+      <details><summary>Documentaries and explainers</summary><p>Long-form documentaries for the full story, and shorter informative videos to spread awareness quickly.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <h2 data-r>How every video is made</h2>
+    <ol class="steps" id="steps" data-r>
+      <li><h3>Notice the practice</h3><p>Pick a ritual or tradition people follow without a second thought.</p></li>
+      <li><h3>Trace it back</h3><p>Go to the sources and the scriptures to find where it started and what changed.</p></li>
+      <li><h3>Say it plainly</h3><p>Share what I found in simple language so anyone can understand it.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="follow" id="follow">
+  <div class="wrap">
+    <h2 data-r>Let’s talk</h2>
+    <p data-r>Have a question, a correction, or a tradition from your own family or village you’d like explained? Message me on Instagram. For collaborations, write there too. New videos are on YouTube.</p>
+    <div class="row" data-r>
+      <a class="btn" href="https://www.youtube.com/@thedevanshdubey28" target="_blank" rel="noopener">Subscribe on YouTube</a>
+      <a class="btn alt" href="https://www.instagram.com/the_devanshdubey" target="_blank" rel="noopener">Message me on Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img class="logo" src="data:image/jpeg;base64,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" alt="Devansh Dubey" width="44" height="44"><span>The Devansh Dubey</span></a>
+    <span>© 2026 The Devansh Dubey. Reality is just in front of you.</span>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add("js");
+(function(){
+  var mq=document.getElementById("mq"),w="रीति रिवाज परंपरा आस्था प्रश्न सच ".split(" ").filter(Boolean),h="";
+  for(var i=0;i<4;i++)w.forEach(function(t){h+="<span>"+t+"</span><span>◆</span>"});
+  mq.innerHTML=h+h;
+  var hero=document.getElementById("hero"),ring=document.getElementById("ring"),hint=document.getElementById("hint");
+  var still=matchMedia("(prefers-reduced-motion: reduce)").matches,user=false,t0=performance.now();
+  function set(x,y){hero.style.setProperty("--x",x+"px");hero.style.setProperty("--y",y+"px");ring.style.setProperty("--xp",x+"px");ring.style.setProperty("--yp",y+"px")}
+  function move(e){var r=hero.getBoundingClientRect();user=true;set(e.clientX-r.left,e.clientY-r.top);if(hint)hint.style.opacity=.0}
+  hero.addEventListener("pointermove",move);
+  hero.addEventListener("pointerdown",move);
+  function idle(t){
+    if(!user){
+      var r=hero.getBoundingClientRect(),k=still?0:(t-t0)/1000;
+      set(r.width*(.5+.3*Math.sin(k*.8)),r.height*(.45+.18*Math.sin(k*1.3+1)));
+    }
+    if(!user||!still)requestAnimationFrame(idle);
+  }
+  requestAnimationFrame(idle);
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");if(e.target.id==="steps")e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
+    document.querySelectorAll("[data-r]").forEach(function(el){io.observe(el)});
+  }else document.querySelectorAll("[data-r]").forEach(function(el){el.classList.add("in")});
+})();
+</script>
+</body>
+</html>
